@@ -1,8 +1,19 @@
 import React from 'react'
+import GameBox from '../components/Game/GameBox';
+import AnimatedTransition from '../components/Layout/AnimatedTransition';
+import {
+    Box,
+    Text,
+    Flex,
+  } from '@chakra-ui/react';
 
 const singleplayer = () => {
   return (
-    <div>singleplayer</div>
+    <AnimatedTransition>
+        <Flex minH='85vh' justifyContent='center' alignItems='center' >
+            <GameBox />
+        </Flex>
+    </AnimatedTransition>
   )
 }
 
