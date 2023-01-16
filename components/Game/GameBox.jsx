@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { VscDebugRestart } from 'react-icons/vsc';
 
-import { shuffleList } from './functions';
+import { shuffleList } from '../../lib/shuffleList';
 import Input from './Input';
 
 import {
@@ -10,7 +10,7 @@ import {
     Box
   } from '@chakra-ui/react';
 
-import { usePreferenceContext } from '../../contexts/PreferenceContext';
+import { usePreferenceContext } from '../../contexts/Prefrence/PreferenceContext';
 
 export default function GameBox() {
   const _ = require('lodash');

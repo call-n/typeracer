@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import AnimatedTransition from '../components/Layout/AnimatedTransition';
 import {
-  Flex,
   Container,
   Heading,
   Stack,

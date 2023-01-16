@@ -1,6 +1,5 @@
 import NextNProgress from 'nextjs-progressbar';
 import { useState, useEffect } from 'react';
-import { CgSpinner } from 'react-icons/cg';
 
 import {
     Box,

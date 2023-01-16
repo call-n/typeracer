@@ -2,8 +2,6 @@ import React from 'react'
 import GameBox from '../components/Game/GameBox';
 import AnimatedTransition from '../components/Layout/AnimatedTransition';
 import {
-    Box,
-    Text,
     Flex,
   } from '@chakra-ui/react';
 

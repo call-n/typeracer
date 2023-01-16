@@ -1,19 +1,11 @@
 import { useEffect, useState } from 'react';
 import AnimatedTransition from '../components/Layout/AnimatedTransition';
 import {
-  Flex,
   Box,
   Container,
   Heading,
   Stack,
   Text,
-  Button,
-  Stat,
-  StatLabel,
-  StatNumber,
-  StatHelpText,
-  StatArrow,
-  StatGroup,
   SimpleGrid,
   Table,
   Thead,
@@ -26,7 +18,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react';
 import { db } from "../firebase";
-import { collection, query, where, getDocs, orderBy, limit, onSnapshot } from "firebase/firestore";
+import { collection, query, orderBy, limit, onSnapshot } from "firebase/firestore";
 
 const Leaderboard = () => {
     const [documents, setDocuments] = useState(null)
@@ -49,8 +41,6 @@ const Leaderboard = () => {
       
         return () => unsubscribe()
     },[ref])
-
-    console.log(documents)
 
   return (
     <AnimatedTransition>

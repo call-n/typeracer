@@ -10,11 +10,9 @@ import {
     StatLabel,
     StatNumber,
     StatHelpText,
-    StatArrow,
-    StatGroup,
   } from '@chakra-ui/react';
 
-import { usePreferenceContext } from '../../contexts/PreferenceContext';
+import { usePreferenceContext } from '../../contexts/Prefrence/PreferenceContext';
 import { useUserContext } from '../../contexts/UserContext';
 
 // eslint-disable-next-line react/display-name
@@ -274,7 +272,6 @@ const TypingInput = forwardRef(({ text, time }, ref) => {
                     % Accuracy</StatHelpText>
                 </Stat>
             ) : null}
-            <div className='flex gap-4'></div>
             </Flex>
         </Box>
       </Flex>

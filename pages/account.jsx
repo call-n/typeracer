@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router';
 import AnimatedTransition from '../components/Layout/AnimatedTransition';
 import {
-  Flex,
   Container,
   Heading,
   Stack,

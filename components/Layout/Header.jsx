@@ -1,17 +1,7 @@
 import Link from 'next/link';
-import * as React from 'react';
-import {
-    IoClose
-} from 'react-icons/io'
-import {
-    RxHamburgerMenu,
-} from 'react-icons/rx'
 import {
     FaCrown,
-    FaInfo,
     FaKeyboard,
-    FaRegUser,
-    FaTerminal,
     FaUser,
   } from 'react-icons/fa';
 import { RiTeamFill } from 'react-icons/ri';
@@ -21,14 +11,11 @@ import {
     Flex,
     Container,
     Stack,
-    useDisclosure,
-    IconButton,
     Icon,
     Heading,
-    Button,
   } from '@chakra-ui/react';
 
-import { usePreferenceContext } from '../../contexts/PreferenceContext';
+import { usePreferenceContext } from '../../contexts/Prefrence/PreferenceContext';
 import { useUserContext } from "../../contexts/UserContext";
 
 const typeList = ['words', 'sentences'];
@@ -46,8 +33,6 @@ export default function Header() {
 
   console.log(currentUser)
 
-  const { isOpen: isMobileNavOpen, onToggle } = useDisclosure();
-
   return (
     <Box>
       <Flex
@@ -61,26 +46,6 @@ export default function Header() {
         justify={'center'}
         >
         <Container as={Flex} maxW={'7xl'} align={'center'}>
-          <Flex
-            flex={{ base: '0', md: 'auto' }}
-            ml={{ base: -2 }}
-            mr={{ base: 6, md: 0 }}
-            display={{ base: 'flex', md: 'none' }}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isMobileNavOpen ? (
-                  <IoClose w={3} h={3} />
-                ) : (
-                  <RxHamburgerMenu w={5} h={5} />
-                )
-              }
-              variant={'ghost'}
-              size={'sm'}
-              aria-label={'Toggle Navigation'}
-            />
-          </Flex>
-
           <Flex
             flex={{ base: 1, md: 'auto' }}
             justify={{ base: 'start', md: 'start' }}>
