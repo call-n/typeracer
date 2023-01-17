@@ -10,8 +10,6 @@ import { auth, db } from "../firebase";
 import {
 	setDoc,
 	doc,
-	getDoc,
-	updateDoc,
     addDoc,
     collection,
 } from "firebase/firestore";
@@ -49,7 +47,7 @@ export const UserContextProvider = ({ children }) => {
                 title: 'Account created.',
                 description: "We've created your account for you.",
                 status: 'success',
-                duration: 7000,
+                duration: 4000,
                 isClosable: true,
               })
     };
@@ -59,7 +57,7 @@ export const UserContextProvider = ({ children }) => {
             title: 'Logged in Successfully.',
             description: "You're logged in and ready to type!",
             status: 'success',
-            duration: 7000,
+            duration: 4000,
             isClosable: true,
           })
 		return signInWithEmailAndPassword(auth, email, password);
@@ -69,7 +67,7 @@ export const UserContextProvider = ({ children }) => {
         toast({
             title: 'Logged out Successfully.',
             status: 'success',
-            duration: 7000,
+            duration: 4000,
             isClosable: true,
           })
 		return signOut(auth);
