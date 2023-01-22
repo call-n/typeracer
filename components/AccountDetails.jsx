@@ -57,7 +57,8 @@ const AccountDetails = () => {
     );
 
     return () => unsubscribe();
-  }, [ref]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   console.log(documents);
 

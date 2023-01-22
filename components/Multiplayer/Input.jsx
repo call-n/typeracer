@@ -321,7 +321,7 @@ const TypingInput = forwardRef(({ className }, ref) => {
           rounded="2xl"
           padding="1rem"
         >
-          {winner ? (
+          {winner == id ? (
             <Stat>
               <StatLabel>Time: {duration} s</StatLabel>
               <StatNumber>
