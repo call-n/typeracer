@@ -1,6 +1,6 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'SET_ROOM_ID':
+    case "SET_ROOM_ID":
       return {
         ...state,
         user: {
@@ -8,12 +8,12 @@ const reducer = (state, action) => {
           roomId: action.payload,
         },
       };
-    case 'SET_MODE':
+    case "SET_MODE":
       return {
         ...state,
         mode: action.payload,
       };
-    case 'SET_IS_OWNER':
+    case "SET_IS_OWNER":
       return {
         ...state,
         user: {
@@ -21,7 +21,7 @@ const reducer = (state, action) => {
           isOwner: action.payload,
         },
       };
-    case 'SET_USER_ID':
+    case "SET_USER_ID":
       return {
         ...state,
         user: {
@@ -29,7 +29,7 @@ const reducer = (state, action) => {
           id: action.payload,
         },
       };
-    case 'SET_STATUS':
+    case "SET_STATUS":
       return {
         ...state,
         user: {
@@ -40,22 +40,22 @@ const reducer = (state, action) => {
           },
         },
       };
-    case 'SET_IS_PLAYING':
+    case "SET_IS_PLAYING":
       return {
         ...state,
         isPlaying: action.payload,
       };
-    case 'SET_IS_FINISHED':
+    case "SET_IS_FINISHED":
       return {
         ...state,
         isFinished: action.payload,
       };
-    case 'SET_WINNER':
+    case "SET_WINNER":
       return {
         ...state,
         winner: action.payload,
       };
-    case 'SET_IS_READY':
+    case "SET_IS_READY":
       return {
         ...state,
         user: {
@@ -63,18 +63,18 @@ const reducer = (state, action) => {
           isReady: action.payload,
         },
       };
-    case 'SET_PLAYERS':
+    case "SET_PLAYERS":
       return {
         ...state,
         players: action.payload,
       };
-    case 'SET_TEXT':
+    case "SET_TEXT":
       return {
         ...state,
         text: action.payload,
       };
     default:
-      throw new Error('Unknown action type');
+      throw new Error("Unknown action type");
   }
 };
 
