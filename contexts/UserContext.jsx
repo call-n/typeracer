@@ -76,7 +76,16 @@ export const UserContextProvider = ({ children }) => {
     return true;
   };
 
-  const addToLeaderboard = async (name, wpm, user, time, type, acc) => {
+  const addToLeaderboard = async (
+    name,
+    wpm,
+    user,
+    time,
+    type,
+    acc,
+    timeDate,
+    timeStamp
+  ) => {
     const reference = collection(db, "scoreboard");
 
     await addDoc(reference, {
@@ -86,6 +95,8 @@ export const UserContextProvider = ({ children }) => {
       time,
       type,
       acc,
+      timeDate,
+      timeStamp,
     });
     return true;
   };

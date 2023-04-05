@@ -57,10 +57,8 @@ const AccountDetails = () => {
     );
 
     return () => unsubscribe();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(documents);
 
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
@@ -128,7 +126,10 @@ const AccountDetails = () => {
                         {doc.wpm} <br /> <Box color="gray.500">{doc.acc}%</Box>
                       </Td>
                       <Th textAlign="right" color="gray.500">
-                        28 Oct 2023 <br /> <Box color="gray.600">19.07</Box>
+                        {doc?.timeDate ? doc.timeDate : "2023-01-01"} <br />{" "}
+                        <Box color="gray.600">
+                          {doc?.timeStamp ? doc.timeStamp : "01:01:01"}
+                        </Box>
                       </Th>
                     </Tr>
                   ))}

@@ -81,67 +81,69 @@ const Leaderboard = () => {
                 All-time Leaderboards
               </Heading>
             </Box>
-              <Box>
-                <Text
-                  fontSize={{ base: "18px", lg: "20px" }}
-                  color={"green.300"}
-                  fontWeight={"500"}
-                  mb={"4"}
-                  textAlign="left"
-                >
-                  Time 15 s
-                </Text>
-                <TableContainer>
-                  <Table size="md" variant="simple">
-                    <TableCaption>Leaderboard for time 15s</TableCaption>
-                    <Thead>
-                      <Tr border="none">
-                        <Th color="gray.500">#</Th>
-                        <Th paddingLeft="0" color="gray.500">
-                          name
-                        </Th>
-                        <Th textAlign="right" color="gray.500">
-                          wpm <br /> <Box color="gray.600">Accuracy%</Box>
-                        </Th>
-                        <Th isNumeric color="gray.500">
-                          date
-                        </Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      {documents &&
-                        documents.map((doc, index) => (
-                          <Tr key={index + 1}>
-                            <Td>{index + 1}</Td>
-                            <Td paddingLeft="0">{doc.name}</Td>
-                            <Td textAlign="right">
-                              {doc.wpm} <br />{" "}
-                              <Box color="gray.500">{doc.acc}%</Box>
-                            </Td>
-                            <Th textAlign="right" color="gray.500">
-                              28 Oct 2023 <br />{" "}
-                              <Box color="gray.600">19.07</Box>
-                            </Th>
-                          </Tr>
-                        ))}
-                    </Tbody>
-                    <Tfoot>
-                      <Tr>
-                        <Th color="gray.500">#</Th>
-                        <Th paddingLeft="0" color="gray.500">
-                          name
-                        </Th>
-                        <Th textAlign="right" color="gray.500">
-                          wpm <br /> <Box color="gray.600">Accuracy%</Box>
-                        </Th>
-                        <Th isNumeric color="gray.500">
-                          date
-                        </Th>
-                      </Tr>
-                    </Tfoot>
-                  </Table>
-                </TableContainer>
-              </Box>
+            <Box>
+              <Text
+                fontSize={{ base: "18px", lg: "20px" }}
+                color={"green.300"}
+                fontWeight={"500"}
+                mb={"4"}
+                textAlign="left"
+              >
+                Time 15 s
+              </Text>
+              <TableContainer>
+                <Table size="md" variant="simple">
+                  <TableCaption>Leaderboard for time 15s</TableCaption>
+                  <Thead>
+                    <Tr border="none">
+                      <Th color="gray.500">#</Th>
+                      <Th paddingLeft="0" color="gray.500">
+                        name
+                      </Th>
+                      <Th textAlign="right" color="gray.500">
+                        wpm <br /> <Box color="gray.600">Accuracy%</Box>
+                      </Th>
+                      <Th isNumeric color="gray.500">
+                        date
+                      </Th>
+                    </Tr>
+                  </Thead>
+                  <Tbody>
+                    {documents &&
+                      documents.map((doc, index) => (
+                        <Tr key={index + 1}>
+                          <Td>{index + 1}</Td>
+                          <Td paddingLeft="0">{doc.name}</Td>
+                          <Td textAlign="right">
+                            {doc.wpm} <br />{" "}
+                            <Box color="gray.500">{doc.acc}%</Box>
+                          </Td>
+                          <Th textAlign="right" color="gray.500">
+                            {doc?.timeDate ? doc.timeDate : "2023-01-01"} <br />{" "}
+                            <Box color="gray.600">
+                              {doc?.timeStamp ? doc.timeStamp : "01:01:01"}
+                            </Box>
+                          </Th>
+                        </Tr>
+                      ))}
+                  </Tbody>
+                  <Tfoot>
+                    <Tr>
+                      <Th color="gray.500">#</Th>
+                      <Th paddingLeft="0" color="gray.500">
+                        name
+                      </Th>
+                      <Th textAlign="right" color="gray.500">
+                        wpm <br /> <Box color="gray.600">Accuracy%</Box>
+                      </Th>
+                      <Th isNumeric color="gray.500">
+                        date
+                      </Th>
+                    </Tr>
+                  </Tfoot>
+                </Table>
+              </TableContainer>
+            </Box>
           </Box>
         </Stack>
       </Container>

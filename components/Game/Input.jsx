@@ -110,7 +110,9 @@ const TypingInput = forwardRef(({ text, time }, ref) => {
           currentUser.uid,
           parseInt(time),
           type || "words",
-          (((correctChar - errorChar) / (currIndex + 1)) * 100).toFixed(2)
+          (((correctChar - errorChar) / (currIndex + 1)) * 100).toFixed(2),
+          new Date().toLocaleDateString(),
+          new Date().toLocaleTimeString()
         );
       }
     } else {
@@ -133,8 +135,6 @@ const TypingInput = forwardRef(({ text, time }, ref) => {
       insertTyping(letter);
     }
   };
-
-  console.log(currIndex);
 
   return (
     <Flex position="relative" maxW="950px" width="100%" flexDirection="column">
